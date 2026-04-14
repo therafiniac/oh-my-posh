@@ -1,0 +1,112 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "os": "#9399B2",
+    "pink": "#F38BA8",
+    "lavender": "#B4BEFE",
+    "blue": "#89B4FA",
+    "wight": "#FFFFFF",
+    "text": "#1E1E2E",
+
+    "git_clean": "#A6E3A1",
+    "git_modified": "#F38BA8",
+    "git_staged": "#FAB387",
+    "git_ahead": "#CBA6F7",
+    "git_detached": "#89B4FA",
+    "git_progress": "#F9E2AF",
+
+    "git_behind": "#F38BA8",
+    "git_diverged": "#FE640B",
+    "git_untracked": "#89DCEB",
+    "git_conflicted": "#E64553",
+
+    "git_stash": "#94E2D5",
+    "git_cherry": "#EBA0AC",
+    "git_revert": "#F2CDCD"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "p:blue",
+          "foreground": "p:wight",
+          "powerline_symbol": "\ue0b4",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "p:blue",
+          "foreground": "p:text",
+          "powerline_symbol": "\ue0b4",
+          "style": "diamond",
+          "template": "{{ .UserName }}",
+          "type": "session"
+        },
+        {
+          "background": "p:pink",
+          "foreground": "p:text",
+          "properties": {
+            "folder_icon": "..\ue5fe..",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          },
+          "powerline_symbol": "\ue0b4",
+          "style": "powerline",
+          "template": " {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "p:text",
+          "style": "powerline",
+          "background": "p:lavender",
+          "background_templates": [
+            "{{ if .Detached }}p:git_detached{{ end }}",
+            "{{ if or (.Rebase) (.Merge) (.CherryPick) (.Revert) }}p:git_progress{{ end }}",
+            "{{ if .Conflicted }}p:git_conflicted{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:git_diverged{{ end }}",
+            "{{ if (gt .Ahead 0) }}p:git_ahead{{ end }}",
+            "{{ if (gt .Behind 0) }}p:git_behind{{ end }}",
+            "{{ if .Staging.Changed }}p:git_staged{{ end }}",
+            "{{ if .Working.Changed }}p:git_modified{{ end }}",
+            "{{ if and (not .Working.Changed) (not .Staging.Changed) (eq .Ahead 0) (eq .Behind 0) (not .Detached) }}p:git_clean{{ end }}"
+          ],
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": true,
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "powerline_symbol": "\ue0b4",
+          "template": " {{ if .Detached }}\uf417 DETACHED {{ .HEAD }}{{ else }}{{ .HEAD }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .CherryPick }} \ue29b CHERRY{{ end }}{{ if .Revert }} \uf0e2 REVERT{{ end }}{{ if .Rebase }} \ue728 REBASING{{ end }}{{ if .Merge }} \ue727 MERGING{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf01c {{ .StashCount }}{{ end }}",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:blue",
+          "style": "plain",
+          "template": "❯",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
