@@ -9,16 +9,16 @@
     "text": "#1E1E2E",
 
     "git_clean": "#A6E3A1",
-    "git_modified": "#F38BA8",
+    "git_modified": "#E64553",
     "git_staged": "#FAB387",
     "git_ahead": "#CBA6F7",
-    "git_detached": "#89B4FA",
+    "git_detached": "#74C7EC",
     "git_progress": "#F9E2AF",
 
-    "git_behind": "#F38BA8",
+    "git_behind": "#CBA6F7",
     "git_diverged": "#FE640B",
     "git_untracked": "#89DCEB",
-    "git_conflicted": "#E64553",
+    "git_conflicted": "#FF2600",
 
     "git_stash": "#94E2D5",
     "git_cherry": "#EBA0AC",
