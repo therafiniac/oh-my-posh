@@ -1,68 +1,59 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "os": "#9399B2",
-    "pink": "#F38BA8",
-    "lavender": "#B4BEFE",
-    "blue": "#89B4FA",
-    "wight": "#FFFFFF",
-    "text": "#1E1E2E",
+    "os": "#6272A4",
+    "pink": "#FF79C6",
+    "lavender": "#BD93F9",
+    "blue": "#8BE9FD",
+    "wight": "#F8F8F2",
+    "text": "#282A36",
 
-    "git_clean": "#A6E3A1",
-    "git_modified": "#E64553",
-    "git_staged": "#FAB387",
-    "git_ahead": "#CBA6F7",
-    "git_detached": "#74C7EC",
-    "git_progress": "#F9E2AF",
+    "git_clean": "#50FA7B",
+    "git_modified": "#FF5555",
+    "git_staged": "#FFB86C",
+    "git_ahead": "#BD93F9",
+    "git_detached": "#8BE9FD",
+    "git_progress": "#F1FA8C",
 
-    "git_behind": "#CBA6F7",
-    "git_diverged": "#FE640B",
-    "git_untracked": "#89DCEB",
-    "git_conflicted": "#FF2600",
+    "git_behind": "#FF5555",
+    "git_diverged": "#FF6E6E",
+    "git_untracked": "#8BE9FD",
+    "git_conflicted": "#FF5555",
 
-    "git_stash": "#94E2D5",
-    "git_cherry": "#EBA0AC",
-    "git_revert": "#F2CDCD"
+    "git_stash": "#50FA7B",
+    "git_cherry": "#FF79C6",
+    "git_revert": "#FFB86C"
   },
   "blocks": [
     {
       "alignment": "left",
       "segments": [
         {
-          "background": "p:blue",
-          "foreground": "p:wight",
-          "powerline_symbol": "\ue0b4",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
+          "foreground": "p:os",
+          "style": "plain",
           "template": "{{.Icon}} ",
           "type": "os"
         },
         {
-          "background": "p:blue",
-          "foreground": "p:text",
-          "powerline_symbol": "\ue0b4",
-          "style": "diamond",
-          "template": "{{ .UserName }}",
+          "foreground": "p:blue",
+          "style": "plain",
+          "template": "{{ .UserName }} ",
           "type": "session"
         },
         {
-          "background": "p:pink",
-          "foreground": "p:text",
+          "foreground": "p:pink",
           "properties": {
             "folder_icon": "..\ue5fe..",
             "home_icon": "~",
             "style": "agnoster_short"
           },
-          "powerline_symbol": "\ue0b4",
-          "style": "powerline",
-          "template": " {{ .Path }}",
+          "style": "plain",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
-          "foreground": "p:text",
-          "style": "powerline",
-          "background": "p:lavender",
-          "background_templates": [
+          "foreground": "p:lavender",
+          "foreground_templates": [
             "{{ if .Detached }}p:git_detached{{ end }}",
             "{{ if or (.Rebase) (.Merge) (.CherryPick) (.Revert) }}p:git_progress{{ end }}",
             "{{ if .Conflicted }}p:git_conflicted{{ end }}",
@@ -86,7 +77,7 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           },
-          "powerline_symbol": "\ue0b4",
+          "style": "plain",
           "template": " {{ if .Detached }}\uf417 DETACHED {{ .HEAD }}{{ else }}{{ .HEAD }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .CherryPick }} \ue29b CHERRY{{ end }}{{ if .Revert }} \uf0e2 REVERT{{ end }}{{ if .Rebase }} \ue728 REBASING{{ end }}{{ if .Merge }} \ue727 MERGING{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf01c {{ .StashCount }}{{ end }}",
           "type": "git"
         }
@@ -100,7 +91,7 @@
         {
           "foreground": "p:blue",
           "style": "plain",
-          "template": "❯",
+          "template": "❯ ",
           "type": "text"
         }
       ],

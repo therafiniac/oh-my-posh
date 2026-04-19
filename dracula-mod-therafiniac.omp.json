@@ -1,28 +1,28 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "os": "#9399B2",
-    "pink": "#F38BA8",
-    "lavender": "#B4BEFE",
-    "blue": "#89B4FA",
-    "wight": "#FFFFFF",
-    "text": "#1E1E2E",
+    "os": "#282A36",
+    "pink": "#FF79C6",
+    "lavender": "#BD93F9",
+    "blue": "#8BE9FD",
+    "wight": "#F8F8F2",
+    "text": "#282A36",
 
-    "git_clean": "#A6E3A1",
-    "git_modified": "#E64553",
-    "git_staged": "#FAB387",
-    "git_ahead": "#CBA6F7",
-    "git_detached": "#74C7EC",
-    "git_progress": "#F9E2AF",
+    "git_clean": "#50FA7B",
+    "git_modified": "#FF5555",
+    "git_staged": "#FFB86C",
+    "git_ahead": "#BD93F9",
+    "git_detached": "#8BE9FD",
+    "git_progress": "#F1FA8C",
 
-    "git_behind": "#CBA6F7",
-    "git_diverged": "#FE640B",
-    "git_untracked": "#89DCEB",
-    "git_conflicted": "#FF2600",
+    "git_behind": "#FF5555",
+    "git_diverged": "#FF6E6E",
+    "git_untracked": "#8BE9FD",
+    "git_conflicted": "#FF5555",
 
-    "git_stash": "#94E2D5",
-    "git_cherry": "#EBA0AC",
-    "git_revert": "#F2CDCD"
+    "git_stash": "#50FA7B",
+    "git_cherry": "#FF79C6",
+    "git_revert": "#FFB86C"
   },
   "blocks": [
     {
