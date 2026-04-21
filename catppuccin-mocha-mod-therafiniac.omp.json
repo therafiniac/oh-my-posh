@@ -1,28 +1,28 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "os": "#9399B2",
-    "pink": "#F38BA8",
+    "os": "#1E1E2E",
+    "pink": "#F5C2E7",
     "lavender": "#B4BEFE",
     "blue": "#89B4FA",
-    "wight": "#FFFFFF",
+    "wight": "#CDD6F4",
     "text": "#1E1E2E",
 
     "git_clean": "#A6E3A1",
-    "git_modified": "#E64553",
+    "git_modified": "#F38BA8",
     "git_staged": "#FAB387",
     "git_ahead": "#CBA6F7",
     "git_detached": "#74C7EC",
     "git_progress": "#F9E2AF",
 
-    "git_behind": "#CBA6F7",
-    "git_diverged": "#FE640B",
+    "git_behind": "#EBA0AC",
+    "git_diverged": "#F9E2AF",
     "git_untracked": "#89DCEB",
     "git_conflicted": "#FF2600",
 
     "git_stash": "#94E2D5",
-    "git_cherry": "#EBA0AC",
-    "git_revert": "#F2CDCD"
+    "git_cherry": "#F2CDCD",
+    "git_revert": "#F5E0DC"
   },
   "blocks": [
     {
